@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumViewController" customModule="SohuAuto" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="335"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album_loading_fail" translatesAutoresizingMaskIntoConstraints="NO" id="Ia7-8f-YaZ">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="AVC-bN-vGb"/>
+                        <constraint firstAttribute="height" constant="100" id="Z8y-xU-dWD"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dmt-BW-5PO">
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="加载失败">
+                                <attributes>
+                                    <color key="NSColor" red="0.66315275430679321" green="0.66673016548156738" blue="0.67024970054626465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="13" name=".PingFangSC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                            <fragment content="，点击重试">
+                                <attributes>
+                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="13" name=".PingFangSC-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="reRequestBtnClick:" destination="-1" eventType="touchUpInside" id="cqT-LZ-WeK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.17644977569580078" green="0.17648559808731079" blue="0.17644217610359192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ia7-8f-YaZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PgM-am-IXX"/>
+                <constraint firstItem="Ia7-8f-YaZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="SWp-75-gSf"/>
+                <constraint firstItem="Dmt-BW-5PO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="X80-66-c8g"/>
+                <constraint firstItem="Dmt-BW-5PO" firstAttribute="top" secondItem="Ia7-8f-YaZ" secondAttribute="bottom" constant="15" id="jqu-xl-4KU"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="62.5" y="-112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="album_loading_fail" width="100" height="100"/>
+    </resources>
+</document>
